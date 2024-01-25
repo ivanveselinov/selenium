@@ -15,6 +15,7 @@ input_element.send_keys("My first Automation!!")
 # Find the button using CSS selector by Name
 button_element = browser.find_element("css selector", 'button[name="butn1"]')
 
+# sleep for 2 sec
 time.sleep(2)
 
 # Click the button
