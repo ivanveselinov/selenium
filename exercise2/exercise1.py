@@ -10,11 +10,11 @@ input2_css_locator = "input[id='ipt2']"
 button4_xpath_locator = "//button[@id='b4']"
 
 # Assign elements
-input1_elem = browser.find_element("css selector", input2_css_locator)
+input2_elem = browser.find_element("css selector", input2_css_locator)
 butn4_elem = browser.find_element("xpath", button4_xpath_locator)
 
 # Manipulate elements
-input1_elem.send_keys("Test text")
+input2_elem.send_keys("Test text")
 
 time.sleep(5)
 
