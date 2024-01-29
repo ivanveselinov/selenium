@@ -13,6 +13,7 @@ button_answer1_path = 'button[id="r1Btn"]'
 button_answer2_path = 'button[id="r2Butn"]'
 button_answer3_path= 'button[id="r3Butn"]'
 merchant_name_path = '//b[text()="Jessica"]'
+password_path = 'div#passwordBanner > h4' # Get password from input1 answer
 submit_answer_path = 'button[id="checkButn"]'
 
 
@@ -23,8 +24,10 @@ input1_element.send_keys("Rock")
 button_answer1 = browser.find_element("css selector", button_answer1_path)
 button_answer1.click()
 
+password_element = browser.find_element("css selector", password_path)
+password = password_element.text
 input2_element = browser.find_element("css selector", input2_element_path)
-input2_element.send_keys('bamboo')
+input2_element.send_keys(password)
 
 button_answer2 = browser.find_element("css selector", button_answer2_path) 
 button_answer2.click()
@@ -40,6 +43,10 @@ button_answer3.click()
 submit_answer = browser.find_element("css selector", submit_answer_path)
 submit_answer.click()
 
+complete_msg = browser.find_element("css selector", "div#trialCompleteBanner h4")
+
+# Check if final message is ok otherwise test will fail
+assert complete_msg.text == 'Trial Complete'
 
 time.sleep(10)
 
