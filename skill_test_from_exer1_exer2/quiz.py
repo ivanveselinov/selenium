@@ -43,6 +43,7 @@ button_answer3.click()
 submit_answer = browser.find_element("css selector", submit_answer_path)
 submit_answer.click()
 
+# Fetch label message
 complete_msg = browser.find_element("css selector", "div#trialCompleteBanner h4")
 
 # Check if final message is ok otherwise test will fail
