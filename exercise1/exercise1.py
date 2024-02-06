@@ -11,7 +11,7 @@ input_element = browser.find_element("css selector", 'input[id="ipt1"]')
 
 # Insert text into input field
 input_element.send_keys("My first Automation!!")
- 
+
 # Find the button using CSS selector by Name
 button_element = browser.find_element("css selector", 'button[name="butn1"]')
 
